@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login - Lecture Feedback System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Lecture Feedback System</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
-
-<h2>Login to Your Account</h2>
-
-<form>
-
-    <label>Email</label><br>
-    <input type="email" placeholder="Enter your email"><br><br>
-
-    <label>Password</label><br>
-    <input type="password" placeholder="Enter your password"><br><br>
-
-    <button type="submit">Login</button>
-
-</form>
-
-<p>
-    Don't have an account? <a href="#">Sign up here</a>
-</p>
-
+<div class="container">
+    <h2>Login</h2>
+    <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+</div>
 </body>
 </html>

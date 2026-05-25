@@ -1,45 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sign Up - Lecture Feedback System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Lecture Feedback System</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
-
-<h2>Create Account</h2>
-
-<form>
-
-    <label>Full Name</label><br>
-    <input type="text" placeholder="Enter full name"><br><br>
-
-    <label>Email</label><br>
-    <input type="email" placeholder="Enter email"><br><br>
-
-    <label>Select Role</label><br>
-    <select>
-        <option value="">-- Select Role --</option>
-        <option value="student">Student</option>
-        <option value="lecturer">Lecturer</option>
-        <option value="admin">Admin</option>
-    </select><br><br>
-
-    <label>Department</label><br>
-    <input type="text" placeholder="Enter department"><br><br>
-
-    <label>ID Number</label><br>
-    <input type="text" placeholder="Matric / Staff ID / Admin Code"><br><br>
-
-    <label>Password</label><br>
-    <input type="password" placeholder="Create password"><br><br>
-
-    <label>Confirm Password</label><br>
-    <input type="password" placeholder="Confirm password"><br><br>
-
-    <button type="submit">Sign Up</button>
-
-</form>
-
-<p>Already have an account? <a href="#">Login here</a></p>
-
+<div class="container">
+    <h2>Sign Up</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <select required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="lecturer">Lecturer</option>
+        </select>
+        <button type="submit">Create Account</button>
+    </form>
+</div>
 </body>
 </html>
