@@ -13,20 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-           
-            $table ->enum('role',[
-                'student',
-                'lecturer',
-                'admin',
-            ]);
 
-            $table->rememberToken();
+            $table->string('course_code')->unique();
+            $table->string('course_title');
+           // Relationship to lecturer in the users table
+            $table->foreignId('lecturer_id')
+                  ->constrained('users')
+                  ->cascadedOnDelete();
             $table->timestamps();
         });
     }
@@ -38,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('courses');
     }
 };
