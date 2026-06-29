@@ -8,6 +8,13 @@
 </head>
 <body>
 <div class="container">
+    <!-- Nav Bar-->
+    <nav class="nav">
+        <div class="container-fluid">
+            <button class="btn-out">Logout</button>
+        </div>
+    </nav>
+    
     <h2>Welcome, Lecturer</h2>
 
     <div class="summary-box">

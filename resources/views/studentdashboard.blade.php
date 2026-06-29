@@ -8,6 +8,12 @@
 </head>
 <body>
 <div class="container">
+    <nav class="nav">
+        <div class="container-fluid">
+            <button class="btn-out">Logout</button>
+        </div>
+    </nav>
+
     <h2>Welcome, Student</h2>
     <p>Select a course to give feedback</p>
 
