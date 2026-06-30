@@ -22,7 +22,7 @@ Route::get('/', function () {
 // Admin Routes
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
 Route::post('/admin/course', [AdminController::class, 'addCourse']);
-Route::delete('/admin/course/{id}', [AdminController::class, 'deleteCourse']);
+Route::delete('/admin/course/{id}', [AdminController::class, 'deleteCourse'])->name('admin.course.delete');
 
 // Student Routes
 Route::get('/student/dashboard', [StudentController::class, 'dashboard']);
