@@ -71,7 +71,7 @@
 
     <p>
         Already have an account?
-        <a href="{{ route('login.form') }}">Login</a>
+        <a href="{{ route('login') }}">Login</a>
     </p>
 </div>
 

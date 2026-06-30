@@ -15,7 +15,7 @@ class LecturerController extends Controller
 
         $courses = Course::where('lecturer_id', $lecturer->id)->get();
 
-        return view('lecturer.dashboard', compact('courses'));
+        return view('lecturerdashboard', compact('courses'));
     }
     public function viewFeedback($courseId)
     {

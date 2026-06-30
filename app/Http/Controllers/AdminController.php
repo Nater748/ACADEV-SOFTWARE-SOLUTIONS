@@ -12,7 +12,7 @@ class AdminController extends Controller
     {
         $lecturers = User::where('role', 'lecturer')->get();
         $courses = Course::with('lecturer')->get();
-        return view('admin.dashboard', compact('lecturers', 'courses'));
+        return view('admin.admindashboard', compact('lecturers', 'courses'));
     }
 
     public function addCourse(Request $request)

@@ -38,8 +38,8 @@
                 <tbody>
                     @foreach($courses as $course)
                         <tr>
-                            <td>{{ $course->code }}</td>
-                            <td>{{ $course->title }}</td>
+                            <td>{{ $course->course_code }}</td>
+                            <td>{{ $course->course_title }}</td>
                             <td>
                                 <a href="{{ route('lecturer.feedback', $course->id) }}"
                                    class="btn-view">
