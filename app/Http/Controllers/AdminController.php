@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $lecturers = User::where('is_lecturer', true)->get();
+        $lecturers = User::where('role', 'lecturer')->get();
         $courses = Course::with('lecturer')->get();
         return view('admin.dashboard', compact('lecturers', 'courses'));
     }

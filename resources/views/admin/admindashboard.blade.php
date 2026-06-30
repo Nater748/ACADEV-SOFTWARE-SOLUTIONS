@@ -9,7 +9,10 @@
 
 <div class="container">
     <nav class="nav">
-        <button class="btn-out">Logout</button>
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="btn-out">Logout</button>
+        </form>
     </nav>
 
     <h2>Welcome, Admin</h2>

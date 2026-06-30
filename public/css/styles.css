@@ -256,3 +256,274 @@ a:hover {
     font-size: 14px;
     line-height: 1.6;
 }
+/* Rating Select Dropdown */
+select[name="rating"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 12px 0;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+select[name="rating"]:hover {
+    border-color: #007bff;
+}
+
+/* Focus (when clicked) */
+select[name="rating"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Option styling (limited browser support but safe) */
+select[name="rating"] option {
+    padding: 10px;
+    font-size: 14px;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* NAV BAR */
+.nav {
+    background-color: #1e293b;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* LOGOUT BUTTON */
+.btn-out {
+    background-color: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-out:hover {
+    background-color: #dc2626;
+}
+
+/* PAGE TITLE */
+h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* COURSES BOX */
+.courses-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* SECTION TITLE */
+.courses-box h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #1e293b;
+}
+
+/* TABLE STYLING */
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-table thead {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.course-table th,
+.course-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.course-table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.course-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* VIEW FEEDBACK BUTTON */
+.btn-view {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: #1d4ed8;
+}
+
+/* EMPTY STATE */
+.courses-box p {
+    color: #6b7280;
+    font-size: 15px;
+}
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* NAV BAR */
+.nav {
+    background-color: #1e293b;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BUTTONS */
+.btn-out,
+.btn-back {
+    background-color: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-back {
+    background-color: #3b82f6;
+}
+
+.btn-out:hover {
+    background-color: #dc2626;
+}
+
+.btn-back:hover {
+    background-color: #2563eb;
+}
+
+/* PAGE TITLE */
+h2 {
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.course-title {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+/* FEEDBACK LIST */
+.feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FEEDBACK CARD */
+.feedback-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-2px);
+}
+
+/* FEEDBACK HEADER */
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* WEEK LABEL */
+.week {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* RATING BADGES */
+.rating {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* RATING COLORS */
+.rating-1 {
+    background-color: #b91c1c;
+}
+
+.rating-2 {
+    background-color: #dc2626;
+}
+
+.rating-3 {
+    background-color: #f59e0b;
+}
+
+.rating-4 {
+    background-color: #16a34a;
+}
+
+.rating-5 {
+    background-color: #22c55e;
+}
+
+/* FEEDBACK MESSAGE */
+.feedback-message {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .feedback-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}

@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecturer Dashboard</title>\
+    <title>Lecturer Dashboard</title>
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
+
 <div class="container">
-    <!-- Nav Bar-->
+
+    <!-- Nav Bar -->
     <nav class="nav">
         <div class="container-fluid">
-            <button class="btn-out">Logout</button>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn-out">Logout</button>
+            </form>
         </div>
     </nav>
-    
-    <h2>Welcome, Lecturer</h2>
 
-    <div class="summary-box">
-        <h3>AI Feedback Summary</h3>
-        <p>
-            Students appreciate your clarity and teaching pace.
-            However, some requested more practical examples and earlier release of lecture materials.
-        </p>
+    <h2>Welcome, {{ auth()->user()->name }}</h2>
+
+    <!-- Courses Section -->
+    <div class="courses-box">
+        <h3>Your Courses</h3>
+
+        @if($courses->count() > 0)
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($courses as $course)
+                        <tr>
+                            <td>{{ $course->code }}</td>
+                            <td>{{ $course->title }}</td>
+                            <td>
+                                <a href="{{ route('lecturer.feedback', $course->id) }}"
+                                   class="btn-view">
+                                    View Feedback
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @else
+            <p>No courses assigned to you yet.</p>
+        @endif
     </div>
+
 </div>
+
 </body>
 </html>

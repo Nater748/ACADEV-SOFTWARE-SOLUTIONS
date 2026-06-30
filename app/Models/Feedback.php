@@ -10,7 +10,6 @@ class Feedback extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
         'student_id',
         'course_id',
         'rating',
